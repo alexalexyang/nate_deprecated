@@ -1,5 +1,5 @@
 
-{% if settings.GOOGLE_ANALYTICS_ID and not settings.DEBUG %}
+{% if settings.GOOGLE_ANALYTICS_ID and not request.user.is_staff and not settings.DEBUG %}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112943481-1"></script>
